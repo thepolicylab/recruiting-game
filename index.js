@@ -467,9 +467,9 @@
                     'from { width:' + Trex.config.WIDTH + 'px }' +
                     'to { width: ' + this.dimensions.WIDTH + 'px }' +
                     '}';
-                
-                // create a style sheet to put the keyframe rule in 
-                // and then place the style sheet in the html head    
+
+                // create a style sheet to put the keyframe rule in
+                // and then place the style sheet in the html head
                 var sheet = document.createElement('style');
                 sheet.innerHTML = keyframes;
                 document.head.appendChild(sheet);
@@ -778,6 +778,10 @@
             this.distanceMeter.acheivement = false;
 
             this.tRex.update(100, Trex.status.CRASHED);
+
+            var para = document.createElement("P");                 // Create a <p> element
+            para.innerHTML = "This is a paragraph.";                // Insert text
+            document.getElementById("myDIV").appendChild(para);     // Append <p> to <div> with id="myDIV"
 
             // Game over panel.
             if (!this.gameOverPanel) {
