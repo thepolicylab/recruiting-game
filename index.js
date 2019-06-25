@@ -780,7 +780,7 @@
             this.tRex.update(100, Trex.status.CRASHED);
 
             var para = document.createElement("P");                 // Create a <p> element
-            para.innerHTML = "This is a paragraph.";                // Insert text
+            para.innerHTML = "So you understand what it's like to work through bureaucracy. You'll fit right in!<br><br>The next step is to apply to Brown's website";                // Insert text
             document.getElementById("main-frame-error").appendChild(para);     // Append <p> to <div> with id="myDIV"
 
             // Game over panel.
