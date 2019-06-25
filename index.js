@@ -781,7 +781,7 @@
 
             var para = document.createElement("P");                 // Create a <p> element
             para.innerHTML = "This is a paragraph.";                // Insert text
-            document.getElementById("myDIV").appendChild(para);     // Append <p> to <div> with id="myDIV"
+            document.getElementById("main-frame-error").appendChild(para);     // Append <p> to <div> with id="myDIV"
 
             // Game over panel.
             if (!this.gameOverPanel) {
