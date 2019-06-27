@@ -779,11 +779,12 @@
 
             this.tRex.update(100, Trex.status.CRASHED);
 
-            var para = document.createElement("P");                 // Create a <p> element
-            para.innerHTML = "So you understand what it's like to work through bureaucracy. You'll fit right in!<br><br>The next step is to apply to Brown's website to our <a href=\"https://brown.wd5.myworkdayjobs.com/en-US/staff-careers-brown/job/Sciences-Library/Project-Manager-1_REQ160824\">Project Manager</a> or <a href=\"https://brown.wd5.myworkdayjobs.com/en-US/staff-careers-brown/job/Sciences-Library/Senior-Project-Manager_REQ157444-1\">Senior Project Manager</a> roles.<br><br>Not sure which level is your better fit? It's pretty quick, so apply to both!<br><br>After you apply, we'll send you a three-hour timed performance task, to complete at a moment of your choosing. If you pass that step, we'll do a 25-minute video interview, and finalists will be invited (all expenses paid) to visit The Policy Lab in Providence, RI.<br><br>We'll keep the position open until we find a fantastic fit, but we expect that most applications will begin by July 7th and offers will be made no later than the first week of August, so we encourage you to apply and to apply quickly.<br><br>Want to learn more? Check out <a href=\"https://thepolicylab.brown.edu\">thepolicylab.brown.edu</a><br><br>Also check out this video about what we're looking for: <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/MXsZg1sQYvA\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+            var makeItReal = document.getElementById("applicant-success");
+            if (makeItReal.style.display === "none") {
+              makeItReal.style.display = "block";
+            }
 
-            // Insert text
-            document.getElementById("main-frame-error").appendChild(para);     // Append <p> to <div> with id="myDIV"
+      
 
             // Game over panel.
             if (!this.gameOverPanel) {
