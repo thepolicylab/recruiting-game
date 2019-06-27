@@ -134,3 +134,9 @@ html, body {
     padding: 0 8px;
   }
 }
+
+
+#applicant-success p {
+  font-family: Rajdhani;
+  font-weight: 400;
+}
