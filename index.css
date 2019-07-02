@@ -144,3 +144,8 @@ html, body {
 #applicant-success {
   padding: 1em;
 }
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-width: 800px) {
+  background: #eee
+ }
