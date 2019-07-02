@@ -152,4 +152,7 @@ html, body {
   #safari-users {
     display: block;
   }
+  .runner-container {
+    display: none;
+  }
  }
