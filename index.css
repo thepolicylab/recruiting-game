@@ -152,8 +152,8 @@ html, body {
   #safari-users {
     display: block;
   }
-  .runner-container,
+  /* .runner-container,
   h4.instructions {
     display: none;
-  }
+  } */
  }
