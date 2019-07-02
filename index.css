@@ -136,18 +136,20 @@ html, body {
 }
 
 
-#applicant-success p {
+#applicant-success p,
+#safari-users p {
   font-family: Rajdhani;
   font-weight: 400;
 }
 
-#applicant-success {
+#applicant-success,
+#safari-users {
   padding: 1em;
 }
 
 
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-width: 800px) {
-  body {
-    background: #eee;
+  #safari-users {
+    display: block;
   }
  }
