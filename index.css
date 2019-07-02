@@ -140,3 +140,7 @@ html, body {
   font-family: Rajdhani;
   font-weight: 400;
 }
+
+#applicant-success {
+  padding: 1em;
+}
