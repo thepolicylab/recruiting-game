@@ -63,11 +63,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 &&
         this.playCount = 0;
 
         // Sound FX.
-        this.audioBuffer = null;
-        this.soundFx = {};
 
         // Global web audio context for playing sounds.
-        this.audioContext = null;
 
         // Images.
         this.images = {};
@@ -129,7 +126,6 @@ if (navigator.userAgent.indexOf('Safari') != -1 &&
         MAX_SPEED: 13,
         MIN_JUMP_HEIGHT: 35,
         MOBILE_SPEED_COEFFICIENT: 1.2,
-        RESOURCE_TEMPLATE_ID: 'audio-resources',
         SPEED: 6,
         SPEED_DROP_COEFFICIENT: 3
     };
@@ -314,26 +310,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 &&
         /**
          * Load and decode base 64 encoded sounds.
          */
-        loadSounds: function () {
-            if (!IS_IOS) {
-                this.audioContext = new AudioContext();
 
-                var resourceTemplate =
-                    document.getElementById(this.config.RESOURCE_TEMPLATE_ID).content;
-
-                for (var sound in Runner.sounds) {
-                    var soundSrc =
-                        resourceTemplate.getElementById(Runner.sounds[sound]).src;
-                    soundSrc = soundSrc.substr(soundSrc.indexOf(',') + 1);
-                    var buffer = decodeBase64ToArrayBuffer(soundSrc);
-
-                    // Async, so no guarantee of order in array.
-                    this.audioContext.decodeAudioData(buffer, function (index, audioData) {
-                        this.soundFx[index] = audioData;
-                    }.bind(this, sound));
-                }
-            }
-        },
 
         /**
          * Sets the game speed. Adjust the speed accordingly if on a smaller screen.
@@ -865,16 +842,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 &&
 
         /**
          * Play a sound.
-         * @param {SoundBuffer} soundBuffer
          */
-        playSound: function (soundBuffer) {
-            if (soundBuffer) {
-                var sourceNode = this.audioContext.createBufferSource();
-                sourceNode.buffer = soundBuffer;
-                sourceNode.connect(this.audioContext.destination);
-                sourceNode.start(0);
-            }
-        },
+
 
         /**
          * Inverts the current page / canvas colors.
@@ -982,20 +951,6 @@ if (navigator.userAgent.indexOf('Safari') != -1 &&
 
 
     /**
-     * Decodes the base 64 audio to ArrayBuffer used by Web Audio.
-     * @param {string} base64String
-     */
-    function decodeBase64ToArrayBuffer(base64String) {
-        var len = (base64String.length / 4) * 3;
-        var str = atob(base64String);
-        var arrayBuffer = new ArrayBuffer(len);
-        var bytes = new Uint8Array(arrayBuffer);
-
-        for (var i = 0; i < len; i++) {
-            bytes[i] = str.charCodeAt(i);
-        }
-        return bytes.buffer;
-    }
 
 
     /**
