@@ -658,11 +658,11 @@ if (navigator.userAgent.indexOf('Safari') != -1 &&
                             errorPageController.trackEasterEgg();
                         }
                     }
-                    //  Play sound effect and jump on starting the game for the first time.
-                    if (!this.tRex.jumping && !this.tRex.ducking) {
-                        this.playSound(this.soundFx.BUTTON_PRESS);
-                        this.tRex.startJump(this.currentSpeed);
-                    }
+                    // //  Play sound effect and jump on starting the game for the first time.
+                    // if (!this.tRex.jumping && !this.tRex.ducking) {
+                    //     this.playSound(this.soundFx.BUTTON_PRESS);
+                    //     this.tRex.startJump(this.currentSpeed);
+                    // }
                 }
 
                 if (this.crashed && e.type == Runner.events.TOUCHSTART &&
