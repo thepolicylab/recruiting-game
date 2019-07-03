@@ -310,6 +310,8 @@
          * Load and decode base 64 encoded sounds.
          */
         loadSounds: function () {
+            // AudioContext is not a thing in non-Chrome browsers. So ignore this function.
+            /*
             if (!IS_IOS) {
                 this.audioContext = new AudioContext();
 
@@ -327,6 +329,7 @@
                         this.soundFx[index] = audioData;
                     }.bind(this, sound));
                 }
+            */
             }
         },
 
