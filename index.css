@@ -148,12 +148,11 @@ html, body {
 }
 
 
-@media screen and (min-width: 800px) and (-webkit-min-device-pixel-ratio:0) {
-  .safari #safari-users {
+#safari-users.safari {
     display: block;
-  }
-  .safari .runner-container,
-  .safari h4.instructions {
+}
+
+/* .safari .runner-container,
+.safari h4.instructions {
     display: none;
-  }
- }
+} */
