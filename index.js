@@ -3,12 +3,7 @@
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
 
-if (navigator.userAgent.indexOf('Safari') != -1 &&
-    navigator.userAgent.indexOf('Chrome') == -1) {
-      var saFinder = document.getElementById("safari-users");
-      saFinder.classList.add("safari");
 
-    }
 
 (function () {
     'use strict';
