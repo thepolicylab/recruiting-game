@@ -13,7 +13,14 @@
     <script src="index.js"></script>
 
 
+    <script type="text/javascript">
+      if (navigator.userAgent.indexOf('Safari') != -1 &&
+          navigator.userAgent.indexOf('Chrome') == -1) {
+            var saFinder = document.getElementById("safari-users");
+            saFinder.classList.add("safari");
 
+          }
+    </script>
 
 </head>
 
@@ -72,13 +79,6 @@
 };
 </script>
 
-<script type="text/javascript">
-  if (navigator.userAgent.indexOf('Safari') != -1 &&
-      navigator.userAgent.indexOf('Chrome') == -1) {
-        var saFinder = document.getElementById("safari-users");
-        saFinder.classList.add("safari");
 
-      }
-</script>
 
 </html>
