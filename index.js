@@ -191,13 +191,8 @@ if (navigator.userAgent.indexOf('Safari') != -1 &&
 
     /**
      * Sound FX. Reference to the ID of the audio tag on interstitial page.
-     * @enum {string}
      */
-    Runner.sounds = {
-        BUTTON_PRESS: 'offline-sound-press',
-        HIT: 'offline-sound-hit',
-        SCORE: 'offline-sound-reached'
-    };
+
 
 
     /**
@@ -658,8 +653,6 @@ if (navigator.userAgent.indexOf('Safari') != -1 &&
                 if (!this.crashed && (Runner.keycodes.JUMP[e.keyCode] ||
                     e.type == Runner.events.TOUCHSTART)) {
                     if (!this.playing) {
-                        this.loadSounds();
-                        this.playing = true;
                         this.update();
                         if (window.errorPageController) {
                             errorPageController.trackEasterEgg();
