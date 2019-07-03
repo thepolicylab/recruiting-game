@@ -137,7 +137,8 @@ html, body {
 
 
 #applicant-success p,
-#safari-users p {
+#safari-users p,
+#other-info p {
   font-family: Rajdhani;
   font-weight: 400;
 }
