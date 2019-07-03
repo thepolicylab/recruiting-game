@@ -757,7 +757,12 @@ if (navigator.userAgent.indexOf('Safari') != -1 &&
 
             this.tRex.update(100, Trex.status.CRASHED);
 
-            var makeItReal = document.getElementById("applicant-success");
+            var makeItReal = document.getElementById("other-info");
+            if (makeItReal.style.display === "block") {
+              makeItReal.style.display = "none";
+            }
+
+            var removeExtra = document.getElementById("applicant-success");
             if (makeItReal.style.display === "none") {
               makeItReal.style.display = "block";
             }
