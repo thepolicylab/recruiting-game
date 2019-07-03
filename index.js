@@ -329,8 +329,8 @@
                         this.soundFx[index] = audioData;
                     }.bind(this, sound));
                 }
-            */
             }
+            */
         },
 
         /**
